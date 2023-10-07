@@ -1,2 +1,2 @@
 # jo-tree.nvim
-Fork of Neovim for personal use
+Fork of [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim/) for personal use
