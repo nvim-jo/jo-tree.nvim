@@ -870,7 +870,11 @@ local function create_floating_window(state, win_options, bufname)
     state.force_float = nil
     -- First get the default options for floating windows.
     local sourceTitle = state.name:gsub("^%l", string.upper)
-    win_options = popups.popup_options("Jo-tree " .. sourceTitle, 40, win_options)
+    if sourceTitle == "Filesystem" then
+      sourceTitle = " File Explorer"
+    end
+    win_options = popups.popup_options(sourceTitle, 40, win_options)
+    -- win_options = popups.popup_options("Jo-tree " .. sourceTitle, 40, win_options)
     win_options.win_options = nil
     win_options.zindex = 40
 
